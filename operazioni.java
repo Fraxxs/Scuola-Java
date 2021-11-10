@@ -59,5 +59,7 @@ public class operazioni
                 System.out.println("Programma chiuso.");
                 break;}
         }
+
+        input.close();
     }
 }

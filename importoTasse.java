@@ -12,12 +12,13 @@ public class importoTasse
 {
     public static void main(String args[])
     {
+        Scanner input = new Scanner(System.in);
+
         int importo;
         double tassa = 0;
+
         while(true)
         {
-            Scanner input = new Scanner(System.in);
-        
             System.out.println("Inserire importo: ");
             importo = input.nextInt();
         
@@ -41,6 +42,8 @@ public class importoTasse
                 System.out.println("Programma chiuso.");
                 break;
             }
+
+            input.close();
         }
     } 
 }
