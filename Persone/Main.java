@@ -4,38 +4,56 @@ import java.util.Scanner;
 
 public class Main
 {
-    public static Persona p; //dichiarata una variabile di tipo "Persona" che verrà
-                             //usata nella riga 36.
-
-    public static void chiSei() //funzione che stampa a video gli elementi
-    {                           //inseriti nella classe "Persona"
-        System.out.println("Sono una persona di nome: " + p.getNome() + ", sesso: " + p.getSesso() + ", età: " + p.getEtà() + ", professione: " + p.getProfessione() + ".");
-    }
-    public static void main(String[]args)
+        public static void main(String[]args)
     {
         Scanner input = new Scanner(System.in);
 
-        String nome = ""; //inizializate delle variabili usate nella riga 36.
-        String sesso = "";
-        int età = 0;
-        String professione = "";
+        String nome; //inizializate delle variabili usate nella riga 36.
+        String sesso;
+        int eta;
+        String professione;
+        int n = 0;
 
-        System.out.print("Inserisci il nome: "); //serie di input delle variabili precedenti
-        nome = input.next();
+        while(true)
+        {
+            System.out.print("Quante persone vuoi inserire? ");
+            n = input.nextInt();
+            input.nextLine();
+            Persona[] p = new Persona[n];
+            for(int i = 0; i < n; i++)
+            {
+                System.out.print("Inserisci il nome della " + (i + 1) + "a persona: "); //serie di input delle variabili precedenti
+                nome = input.nextLine();
 
-        System.out.print("Inserisci il sesso: ");
-        sesso = input.next();
+                System.out.print("\tInserisci il sesso: ");
+                sesso = input.nextLine();
 
-        System.out.print("Inserisci l'età: ");
-        età = input.nextInt();
+                System.out.print("\tInserisci l'età: ");
+                eta = input.nextInt();
 
-        System.out.print("Inserisci la professione: ");
-        professione = input.next();
-        System.out.println("");
+                System.out.print("\tInserisci la professione: ");
+                input.nextLine();
+                professione = input.nextLine();
+                System.out.println("");
 
-        p = new Persona (nome, sesso, età, professione);
+                p[i] = new Persona (nome, sesso, eta, professione);
+            }
+            for (int i = 0; i < n; i++)
+            {
+                System.out.println("\n" + p[i].getNome() + " dice: " + p[i].toString()); //richiamo al metodo che stampa la classe "Persona".
+            }
+            int scelta = 0;
 
-        chiSei(); //richiamo al metodo che stampa la classe "Persona".
+            System.out.print("Se desideri terminare il programma allora digita '0', altrimenti digita qualsiasi altro numero. ");
+            scelta = input.nextInt();
+
+            if(scelta == 0)
+            {
+                break;
+            }
+        }
+
+        System.out.println("Programma terminato.");
 
         input.close();
     }    
