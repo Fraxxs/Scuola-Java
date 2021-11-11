@@ -4,7 +4,7 @@ public class Persona
 {
     private String nome;
     private String sesso;
-    private int età;
+    private int eta;
     private String professione;
 
     private void setNome(String nome)
@@ -17,9 +17,9 @@ public class Persona
         this.sesso = sesso;
     }
 
-    private void setEtà(int età)
+    private void setEta(int eta)
     {
-        this.età = età;
+        this.eta = eta;
     }
 
     private void setProfessione(String professione)
@@ -37,9 +37,9 @@ public class Persona
         return sesso;
     }
 
-    public int getEtà()
+    public int getEta()
     {
-        return età;
+        return eta;
     }
 
     public String getProfessione()
@@ -47,11 +47,17 @@ public class Persona
         return professione;
     }
 
-    Persona(String nome, String sesso, int età, String professione)
+    Persona(String nome, String sesso, int eta, String professione)
     {
         setNome(nome);
         setSesso(sesso);
-        setEtà(età);
+        setEta(eta);
         setProfessione(professione);
+    }
+
+    public String toString()
+    {
+        String s = "Sono una persona di nome: " + getNome() + ", sesso: " + getSesso() + ", eta: " + getEta() + " anni" + ", professione: " + getProfessione() + ".";
+        return s;
     }
 }
