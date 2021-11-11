@@ -12,16 +12,16 @@ public class stampaInversa
 
         int n = 0;
 
-        System.out.println("Quanti valori vuoi inserire? ");
+        System.out.print("Quanti valori vuoi inserire? ");
         n = input.nextInt();
         
         int[] v = new int[n];
 
-        System.out.println("Inserisci i valori (max 100): ");
+        System.out.println("Inserisci i valori: ");
 
         for (int i = 0; i < n; i++)
         {
-            System.out.print("Valore numero" + (i+1) + ": ");
+            System.out.print("Valore numero " + (i+1) + ": ");
             v[i] = input.nextInt();
         }
 
