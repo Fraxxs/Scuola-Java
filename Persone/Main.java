@@ -46,7 +46,7 @@ public class Main
             }
             int scelta = 0;
 
-            System.out.print("Se desideri terminare il programma allora digita '0', altrimenti digita qualsiasi altro numero. ");
+            System.out.print("\nSe desideri terminare il programma allora digita '0', altrimenti digita qualsiasi altro numero. ");
             scelta = input.nextInt();
 
             if(scelta == 0)
