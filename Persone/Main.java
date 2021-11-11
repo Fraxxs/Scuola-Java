@@ -19,7 +19,9 @@ public class Main
             System.out.print("Quante persone vuoi inserire? ");
             n = input.nextInt();
             input.nextLine();
+            
             Persona[] p = new Persona[n];
+
             for(int i = 0; i < n; i++)
             {
                 System.out.print("Inserisci il nome della " + (i + 1) + "a persona: "); //serie di input delle variabili precedenti
