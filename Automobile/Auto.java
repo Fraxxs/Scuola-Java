@@ -170,11 +170,11 @@ public class Auto
     {                     //calcolando i litri necessari per arrivare ai kilometri inseriti
                           //tramite un consumo in 30Km e i litri nel serbatoio.
 
-        if(((getLitriCarburante() / getConsumi()) * 30) > getDistanza())
+        if(((getLitriCarburante() / getConsumi()) * 30) >= getDistanza())
         {
             System.out.println("Il viaggio può essere eseguito senza problemi.");
         }
-        if(((getLitriCarburante() / getConsumi()) * 30) <= getDistanza())
+        if(((getLitriCarburante() / getConsumi()) * 30) < getDistanza())
         {
             System.out.println("Non hai abbastanza benzina per svolgere il viaggio.");
 
