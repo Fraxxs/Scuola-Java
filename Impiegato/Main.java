@@ -21,7 +21,7 @@ public class Main
         eta = input.nextInt();
 
         Impiegati i1 = new Impiegati("Franco", "Rossi", eta, "francorossi@gmail.com", "3911835976", 800, "non scelto"); //creato un nuovo impiegato, tutto presettato tranne l'età che verrà usata per stabilire il "tipo" di impiegato.
-        Impiegati i2 = new Impiegati(i1); //copiato l'impiegato "i1"
+        Impiegati i2 = new Impiegati(i1); //copiato l'impiegato "i1".
 
         System.out.println(i1.toString()); //vengono stampate le informazioni sul primo impiegato.
 
