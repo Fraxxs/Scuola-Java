@@ -29,7 +29,7 @@ public class AlfanumericoRandomico
                                                       //e la variabile da inserire come carattere. Per esempio z.insert(4, " ciao") inserisce " ciao" nella posizione numero 4
                                                       //(da tenere a mente che la posizione vale come i vettori e quindi va da 0 in su)
                                                       //Nel mio github è presente un esempio dell'utilizzo della classe StringBuilder()
-                                                      //(https://github.com/Fraxxs/Scuola-Java/blob/main/EsempioAppend.java)
+                                                      //(https://github.com/Fraxxs/Scuola-Java/blob/main/EsempioStringBuilder.java)
 
         for (int i = 0; i < lunghezza; i++)//Semplice ciclo for che si ripete il numero di volte inserito nel metodo
         {
