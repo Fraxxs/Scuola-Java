@@ -1,3 +1,19 @@
+/*Il Ministero dell'Istruzione deve commissionare
+un software per il calcolo dei contributi statali
+dovuti alle scuole. Un professionista viene in
+caricato di progettare e implementare la gerarchia
+di classi che rappresenta le scuole.
+Durante un'intervista con il direttore generale del Ministero
+emerge quanto segue:
+- le scuole possono essere: elementari, medie o superiori;
+- per ogni scuola è necessario memorizzare il codice alfanumerico, la denominazione, la città, il numero di studenti, il numero di classi, il numero di sedi aggiuntive e il numero complessivo di laboratori;
+- le scuole elementari hanno diritto a un con tributo annuale per ogni studente e per ogni sede aggiuntiva: i contributi valgono oggi 125 € per ogni studente e 9000 € per ogni sede aggiuntiva (i valori potrebbero essere modificati in futuro);
+- le scuole medie hanno diritto a un contributo annuale per ogni studente, per ogni labora torio e per ogni sede aggiuntiva: i contributi valgono oggi 150 € per ogni studente, 1100 € per ogni laboratorio e 9000 € per ogni sede aggiuntiva (i valori potrebbero essere modi ficati in futuro);
+- le scuole superiori sono di tre tipi diversi: li cei, tecnici e professionali;
+- licei hanno diritto a un contributo annuale uguale a quello delle scuole medie, escluso il contributo per eventuali sedi aggiuntive;
+- tecnici hanno diritto a un contributo annua le per ogni classe e per ogni indirizzo: i con tributi valgono oggi 3500 € per ogni classe el 6000 € per ogni laboratorio (i valori potreb bero essere modificati in futuro);
+- professionali che hanno diritto anche al contributi regionali hanno diritto a un con tributo statale di 2400 € per ogni classe e di 3000 € per ogni laboratorio (i valori potrebbero essere modificati in futuro).*/
+
 package Scuole;
 
 import java.util.Scanner;
@@ -8,8 +24,9 @@ public class Main
     {
         Scanner input = new Scanner(System.in);
         
-        AlfanumericoRandomico random = new AlfanumericoRandomico();
-        String codice = random.alfanumericoRandomico(10);
+        AlfanumericoRandomico AlfaRandom = new AlfanumericoRandomico(); //creato un oggetto della classe "AlfanumericoRandomico()" (guarda https://github.com/Fraxxs/Scuola-Java/blob/main/Scuole/AlfanumericoRandomico.java)
+        String codice = AlfaRandom.alfanumericoRandomico(10); //qui viene richiamato il metodo per generare il numero randomico, ho scelto un massimo di "10"
+                                                              //e viene assegnato alla variabile "codice" sottoforma di String.
 
         String grado = "";
         String denominazione;
@@ -18,7 +35,7 @@ public class Main
         int nClassi;
         int sediAggiuntive;
         int laboratori;
-
+        //input dei delle varie variabili
         System.out.print("Inserire il nome della scuola: ");
         denominazione = input.nextLine();
 
@@ -36,7 +53,7 @@ public class Main
 
         System.out.print("Inserire il numero di laboratori presenti nella scuola: ");
         laboratori = input.nextInt();
-
+        //ciclo while e switch per eseguire una scelta
         boolean loop = true;
         while(loop)
         {
@@ -80,15 +97,18 @@ public class Main
                     break;
                 }
 
-                default: break;
+                default: 
+                {
+                    System.out.println("Scelta non valida.");
+                    break;
+                }
             }
         }
+        Scuola s1 = new Scuola(grado, codice, denominazione, citta, nStudenti, nClassi, sediAggiuntive, laboratori); //creazione oggetto di "Scuola"
 
-        Scuola s1 = new Scuola(grado, codice, denominazione, citta, nStudenti, nClassi, sediAggiuntive, laboratori);
+        System.out.println("Contributo annuale calcolato in base al grado della scuola: " + s1.contributoAnnuale() + "."); //richiamo della funzione che calcola il contributo annuale
 
-        System.out.println("Contributo annuale calcolato in base al grado della scuola: " + s1.contributoAnnuale() + ".");
-
-        System.out.println(s1.toString());
+        System.out.println(s1.toString()); //stampa delle informazioni sull'oggetto
 
         input.close();
     }
