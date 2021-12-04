@@ -11,7 +11,7 @@ public class Scuola
     private int contributi;
     private int sediAggiuntive = 0;
     private int laboratori;
-
+    //costruttore
     Scuola(String grado, String codice, String denominazione, String citta, int nStudenti, int nClassi, int sediAggiuntive, int laboratori)
     {
         setGrado(grado);
@@ -23,20 +23,7 @@ public class Scuola
         setSediAggiuntive(sediAggiuntive);
         setLaboratori(laboratori);
     }
-
-    /*Scuola(Scuola copia)
-    {
-        grado = copia.getGrado();
-        codice = copia.getCodice();
-        denominazione = copia.getDenominazione();
-        citta = copia.getCitta();
-        nStudenti = copia.getNStudenti();
-        nClassi = copia.getNClassi();
-        contributi = copia.getContributi();
-        sediAggiuntive = copia.getSediAggiuntive();
-        laboratori = copia.getLaboratori();
-    }*/
-
+    //getter/setter
     private void setGrado(String grado)
     {
         this.grado = grado;
@@ -126,7 +113,7 @@ public class Scuola
     {
         return laboratori;
     }
-
+    //metodo che calcola il contributo annuale in base al grado scolastico
     public int contributoAnnuale()
     {
         if (grado == "Elementari")
@@ -156,10 +143,10 @@ public class Scuola
 
         return contributi;
     }
-
+    //toString che stampa le informazioni di un oggetto
     public String toString()
     {
-        String s = "\n\tGrado: " + getGrado() + ".\n\tCodice Alfanumerico: " + getCodice() + ".\n\tNome: " + getDenominazione() + ".\n\tCittà: " + getCitta() + ".\n\tNumero studenti: " + getNStudenti() + ".\n\tNumero Classi: " + getNClassi() + ".\n\tNumero sedi aggiuntive: " + getSediAggiuntive() + ".\n\tLaboratori: " + getLaboratori() + ".\n";
+        String s = "\n\tGrado: " + getGrado() + ".\n\tCodice Alfanumerico: " + getCodice() + ".\n\tNome: " + getDenominazione() + ".\n\tCittà: " + getCitta() + ".\n\tNumero studenti: " + getNStudenti() + ".\n\tNumero Classi: " + getNClassi() + ".\n\tNumero sedi aggiuntive: " + getSediAggiuntive() + ".\n\tLaboratori: " + getLaboratori() + ".\n\tContributi annuali: " + getContributi() + " euro.\n";
         return s;
     }
 }
