@@ -31,6 +31,8 @@ public class EsempioStringBuilder
 
         System.out.println(esempio); //stamperà "5 + 5 = 10"
 
-        String convertire = esempio.toString(); //nel codice questo non viene utilizzato ma in caso servisse "esempio" può essere convertito in String con un semplice "toString()"
+        String convertire = esempio.toString(); //in caso servisse "esempio" può essere convertito in String con un semplice "toString()"
+
+        System.out.println(convertire); //stamperà "5 + 5 = 10"
     }    
 }
