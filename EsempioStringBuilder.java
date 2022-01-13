@@ -19,7 +19,7 @@ public class EsempioStringBuilder
 
         StringBuilder esempio = new StringBuilder(); //creazione oggetto (che possiamo definire come una variabile) di tipo StringBuilder
 
-        esempio.append("5 + 5 "); //"esempio" è vuoto, con questa riga si aggiunge "ciao" ad esso.
+        esempio.append("5 + 5 "); //"esempio" è vuoto, con questa riga si aggiunge "5 + 5 " ad esso.
 
         System.out.println(esempio); //stamperà "5 + 5 "
 

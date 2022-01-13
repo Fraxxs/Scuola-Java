@@ -1,7 +1,7 @@
 /*Il Ministero dell'Istruzione deve commissionare
 un software per il calcolo dei contributi statali
-dovuti alle scuole. Un professionista viene in
-caricato di progettare e implementare la gerarchia
+dovuti alle scuole. Un professionista viene incaricato
+di progettare e implementare la gerarchia
 di classi che rappresenta le scuole.
 Durante un'intervista con il direttore generale del Ministero
 emerge quanto segue:
